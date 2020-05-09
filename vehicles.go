@@ -4,18 +4,19 @@ import "encoding/json"
 
 // Represents the vehicle as returned from the Tesla API
 type Vehicle struct {
-	Color                  interface{} `json:"color"`
-	DisplayName            string      `json:"display_name"`
 	ID                     int64       `json:"id"`
-	OptionCodes            string      `json:"option_codes"`
+	UserID                 int         `json:"user_id"`
 	VehicleID              int         `json:"vehicle_id"`
 	Vin                    string      `json:"vin"`
+	DisplayName            string      `json:"display_name"`
+	OptionCodes            string      `json:"option_codes"`
+	Color                  interface{} `json:"color"`
 	Tokens                 []string    `json:"tokens"`
 	State                  string      `json:"state"`
+	InService              bool        `json:"in_service"`
 	IDS                    string      `json:"id_s"`
-	RemoteStartEnabled     bool        `json:"remote_start_enabled"`
 	CalendarEnabled        bool        `json:"calendar_enabled"`
-	NotificationsEnabled   bool        `json:"notifications_enabled"`
+	APIVersion             int         `json:"api_version"`
 	BackseatToken          interface{} `json:"backseat_token"`
 	BackseatTokenUpdatedAt interface{} `json:"backseat_token_updated_at"`
 }
