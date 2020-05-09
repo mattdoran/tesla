@@ -28,9 +28,7 @@ type VehicleResponse struct {
 
 // Represents the vehicles from an account, as you could have more than
 // one Tesla associated to your account
-type Vehicles []struct {
-	*Vehicle
-}
+type Vehicles []*Vehicle
 
 // The response that contains the vehicles details from the Tesla API
 type VehiclesResponse struct {
